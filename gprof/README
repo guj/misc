@@ -1,0 +1,25 @@
+* use -pg to compile
+* run prog as usual
+*      ./pg.run_issue380 ../../../../Jan2024/Test/issue380/bp5-v/diags/diag1/openpmd  bp v >> out.bp5_v
+       ./pg.run_issue380 ../../../../Jan2024/Test/issue380/bp5-f/defaultBP5-rank-ews_diags_f/diag1/openpmd_ bp f  >> out.bp5_f
+       ./pg.run_issue380 ../../../../Jan2024/Test/issue380/h5-f/h5_diags_f/diag1/openpmd_ h5 f >> out.h5_f
+
+
+
+* pip install gprof2dot
+
+* gprof pg.run_issue380 | gprof2dot -w
+
+*   pdf works better than png: (dot: graph is too large for cairo-renderer bitmaps. Scaling by 0.... to fit)
+*   or svg (need to find a viewer)
+* gprof pg.run_issue380 | gprof2dot -w   |  ./dot -Gdpi=200  -Tpdf  -o out.pdf
+
+
+* if you don't have dot, then download graphviz from source
+* cd to graphviz source dir
+* ./configure --prefix=<install_dir>
+* make install
+
+
+
+

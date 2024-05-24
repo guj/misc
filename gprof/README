@@ -1,4 +1,7 @@
-* use -pg to compile
+* use -pg to compile in order to use gprof samples
+*
+* The pg.run_issue380 is was the exe after compiling with issue380.cpp with -pg (and compiled openPMD-api with -pg as well)
+*   
 * run prog as usual
 *      ./pg.run_issue380 ../../../../Jan2024/Test/issue380/bp5-v/diags/diag1/openpmd  bp v >> out.bp5_v
        ./pg.run_issue380 ../../../../Jan2024/Test/issue380/bp5-f/defaultBP5-rank-ews_diags_f/diag1/openpmd_ bp f  >> out.bp5_f

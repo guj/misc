@@ -85,9 +85,9 @@ int main(int argc, char *argv[])
     Extent extent = ex.getExtent();
 
     auto all_data = ex.loadChunk<double>();
+    i.close() 
     //std::cout<< all_data.get()[0]<<std::endl;
     //std::cout<< all_data.get()[1]<<std::endl;
-    i.close();
 
     //break;
   }

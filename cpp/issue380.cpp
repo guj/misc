@@ -58,7 +58,17 @@ int main(int argc, char *argv[])
     readMode = Access::READ_LINEAR;
   
   Timer* openTimer = new Timer("opening series: ");
-  Series series = Series(fileName, readMode); //Access::READ_ONLY);
+
+  std::string jsonOptions = "{}";
+  if (argc >= 5) {
+    std::string arg4str = argv[4];
+    if (arg4str == "lazy")
+      jsonOptions = "{\"defer_iteration_parsing\": true}";
+  }
+  
+  std::cout<<"Using json option: "<<jsonOptions<<std::endl;
+  
+  Series series = Series(fileName, readMode, jsonOptions); 
   if ( Access::READ_ONLY == readMode )
     cout << "Read a Series with openPMD standard version " << series.openPMD()<< '\n';
   else
@@ -85,7 +95,7 @@ int main(int argc, char *argv[])
     Extent extent = ex.getExtent();
 
     auto all_data = ex.loadChunk<double>();
-    i.close() 
+    i.close();
     //std::cout<< all_data.get()[0]<<std::endl;
     //std::cout<< all_data.get()[1]<<std::endl;
 

@@ -5,3 +5,15 @@ https://github.com/openPMD/openPMD-viewer/issues/400
 https://github.com/openPMD/openPMD-viewer/issues/380 
 
 
+frontier data:
+   /lustre/orion/csc143/scratch/junmin/2024-may/Test/issue380/diags/
+
+perlmutter data:
+  /pscratch/sd/j/junmin/perlmutter/Jan2024/Test/issue380/bp5-f/
+  /pscratch/sd/j/junmin/perlmutter/Jan2024/Test/issue380/bp5-v/
+  /pscratch/sd/j/junmin/perlmutter/Jan2024/Test/issue380/h5-f/
+  
+
+warpx input used to generated bp files (file based)
+  ./warpx/input_3d_bp5
+
